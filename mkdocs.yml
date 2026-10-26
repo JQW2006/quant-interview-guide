@@ -1,0 +1,121 @@
+site_name: 量化笔试面试指南
+site_description: 面向国内量化私募研究岗实习与校招的笔试面试复习资料
+site_url: https://jqw2006.github.io/quant-interview-guide/
+repo_url: https://github.com/JQW2006/quant-interview-guide
+repo_name: JQW2006/quant-interview-guide
+edit_uri: edit/main/docs/
+copyright: 内容采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a> 许可
+
+docs_dir: docs
+site_dir: site
+strict: true
+
+hooks:
+  - hooks/markdown.py
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  font: false
+  icon:
+    logo: material/book-open-page-variant-outline
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  # 中文分词在构建时由 jieba 完成（安装 jieba 即生效）；浏览器端用默认分词器即可，
+  # lang: zh 依赖 Node 版 jieba，在浏览器中无法加载。
+  # pipeline 置空：词干提取与查询通配符冲突（如 Purged 搜不到），trimmer 会删掉中文词。
+  # 查询分词的修正见 overrides/assets/javascripts/workers/。
+  - search:
+      pipeline: []
+      separator: '[\s​\-_,:!=\[\]()"`/、，。：；！？（）·]+'
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: false
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+extra_css:
+  - assets/katex/katex.min.css
+  - assets/extra.css
+
+extra_javascript:
+  - assets/katex/katex.min.js
+  - assets/katex/auto-render.min.js
+  - assets/extra.js
+
+nav:
+  - 首页: index.md
+  - 概率论:
+      - 讲解: probability/notes.md
+      - 题库: probability/problems.md
+  - 统计与计量:
+      - 讲解: statistics/notes.md
+      - 题库: statistics/problems.md
+  - 编程与算法:
+      - 讲解: programming/notes.md
+      - 题库: programming/problems.md
+  - 数学与智力题:
+      - 讲解: math/notes.md
+      - 题库: math/problems.md
+  - 机器学习:
+      - 讲解: machine-learning/notes.md
+      - 题库: machine-learning/problems.md
+  - 金融常识:
+      - 讲解: finance/notes.md
+      - 题库: finance/problems.md
