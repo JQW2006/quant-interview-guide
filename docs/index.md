@@ -7,8 +7,6 @@ hide:
 
 # 量化笔试面试指南
 
-<p class="hero-sub">面向国内量化私募研究岗实习与校招的笔试面试复习资料。每个专题包括讲解与题库，题目注明来源与难度，答案默认折叠。</p>
-
 </div>
 
 <div class="grid cards topic-cards" markdown>

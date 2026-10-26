@@ -277,19 +277,13 @@ section.q[hidden],
 }
 
 .md-typeset .hero h1 {
-  margin: 0 0 0.4em;
+  margin: 0;
   font-size: 1.9rem;
   color: var(--md-primary-fg-color);
 }
 
 [data-md-color-scheme="slate"] .md-typeset .hero h1 {
   color: var(--md-default-fg-color);
-}
-
-.md-typeset .hero-sub {
-  max-width: 44rem;
-  margin: 0;
-  color: var(--md-default-fg-color--light);
 }
 
 /* 专题卡片：每张一种主题色 */
