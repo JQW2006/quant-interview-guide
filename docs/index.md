@@ -9,6 +9,16 @@ hide:
 
 </div>
 
+<div class="grid cards topic-cards intro-card" markdown>
+
+-   :material-compass-outline:{ .topic-icon } **认识量化行业**
+
+    量化投资的核心逻辑、主要产品、工作流程、岗位与公司、薪资，以及招聘看重的能力。
+
+    [阅读](industry.md){ .topic-link .topic-link--bank }
+
+</div>
+
 <div class="grid cards topic-cards" markdown>
 
 -   :material-dice-multiple-outline:{ .topic-icon } **概率论**

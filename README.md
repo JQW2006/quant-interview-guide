@@ -6,6 +6,8 @@
 
 ## 内容
 
+[认识量化行业](docs/industry.md)：行业逻辑、产品、岗位、公司、薪资与招聘，供初次了解量化行业的读者阅读。
+
 | 专题 | 讲解 | 题库 |
 |---|---|---|
 | 概率论 | [讲解](docs/probability/notes.md) | [题库](docs/probability/problems.md) |
@@ -55,6 +57,7 @@ mkdocs build
 docs/
 ├── <专题>/notes.md      讲解
 ├── <专题>/problems.md   题库
+├── industry.md          认识量化行业
 ├── index.md             首页
 └── assets/              样式、脚本、KaTeX
 hooks/markdown.py        构建时的语法转换

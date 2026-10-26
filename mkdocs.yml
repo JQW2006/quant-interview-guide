@@ -101,6 +101,7 @@ extra_javascript:
 
 nav:
   - 首页: index.md
+  - 认识量化行业: industry.md
   - 概率论:
       - 讲解: probability/notes.md
       - 题库: probability/problems.md

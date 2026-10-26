@@ -300,6 +300,13 @@ section.q[hidden],
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 
+.topic-cards.intro-card > ul > li { --topic: var(--md-primary-fg-color); }
+
+.md-typeset .grid.intro-card {
+  grid-template-columns: 1fr;
+  margin-bottom: 0.8rem;
+}
+
 .md-typeset .grid.topic-cards > ul > li {
   border-top: 3px solid var(--topic);
 }
